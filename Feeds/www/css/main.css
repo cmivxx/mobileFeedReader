@@ -1,0 +1,46 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.break {
+	background-color: #fff;
+	padding: 10px;
+	border: 1px solid darkgrey;
+	margin-bottom: 25px;
+}
+
+.feedTitle {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.feedTitle a:link, .feedTitle a:visited {
+	color: #337ab7;
+	text-decoration: none;
+}
+
+.feedTitle a:hover, .feedTitle a:active {
+	color: red;
+	text-decoration: underline;
+}
+
+.fcontainer ul {
+	padding: 0;
+	margin-left: 20px;
+}
+
+.ul {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+.fLink:link, .fLink:visited {
+	color: #000;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.fLink:hover, .fLink:active {
+	text-decoration: underline;
+	font-size: 12px;
+}

@@ -1,0 +1,132 @@
+
+<!DOCTYPE html> 
+<html> 
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Mobile Feed Reader</title> 
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="data/data.js"></script>
+	<script src="data/settings.js"></script>
+	<script src="js/inject.js"></script>
+</head> 
+
+	
+<body> 
+
+<div data-role="page" id="one" data-theme="a">
+<script type="text/javascript">
+	$(function(){
+		var objData = feedData.feedData;
+		$.each(objData, function(index, value) {
+			$('<div class="break" id="f-c_id' + value.idnum + '"><div class="feedTitle"><a href="' + value.url + '" target="_new">' + value.name + '</a></div><ul class="f-l_id' + value.idnum + '"></ul></div>').appendTo(".fcontainer");
+			getFeedItems(value.idnum, value.name, value.url, value.rss, '10');
+		});
+
+		function getFeedItems(fid, fname, furl, frss, lmt) {
+	        url = frss;
+	        $.ajax({
+	        	type: "GET",
+	        	url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=1000&callback=?&q=' + encodeURIComponent(url),
+	        	dataType: 'json',
+		        error: function(){
+		            alert('Unable to load feed, Incorrect path or invalid feed');
+		        },
+		        success: function(xml){
+		        	var index;
+		            values = xml.responseData.feed.entries;
+
+		            //$('.loading').hide();
+
+		            for (index = 0; index < lmt; ++index) {
+		            	title = values[index].title;
+		            	link = values[index].link;
+		            	$('<li><a href="' + link + '" class="fLink" target="_new">' + title + '</a></li>').appendTo(".f-l_id" + fid);
+		            }
+		        }
+	    	});
+	    }
+	});
+</script>
+
+	<div data-role="header">
+		<h1 id="appTitle">Mobile Data Feeds</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" class="ui-content" role="main">	
+		<h2 id="thirdPageTitle">Feeds</h2>
+		<!-- div id="thirdPageContent">Third Page Content</div -->	
+	
+		<div class="fcontainer"></div>	
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" id="footer">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#one" id="mainPageTitleN3">Home</a></li>
+				<li><a href="#two" id="secondPageTitleN3">About</a></li>
+				<li><a href="#three	" id="thirdPageTitleN3">Data</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page One -->
+
+<!-- Start of first page: #two -->
+<div data-role="page" id="two" data-theme="a">
+
+	<div data-role="header">
+		<h1 id="appTitle">KI Sample App</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		<h2 id="mainPageTitle">Main</h2>
+		
+		<div id="mainPageContent"></div>
+
+		<!-- p><a href="#popup"data-role="button" data-rel="dialog" data-transition="pop">Show page "popup" (as a dialog)</a></p -->
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" id="footer">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#one" id="mainPageTitleN1">Home</a></li>
+				<li><a href="#two" id="secondPageTitleN1">About</a></li>
+				<li><a href="#three	" id="thirdPageTitleN1">Data</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+
+<!-- Start of second page: #three -->
+<div data-role="page" id="three" data-theme="a">
+
+	<div data-role="header">
+		<h1 id="appTitle">Second</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="a">	
+		<h2 id="secondPageTitle">Second Page Title</h2>
+		<div id="secondPageContent">Second Page Content</div>	
+		
+	</div><!-- /content -->
+	
+	<div data-role="footer" data-position="fixed" id="footer">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#one" id="mainPageTitleN2">Home</a></li>
+				<li><a href="#two" id="secondPageTitleN2">About</a></li>
+				<li><a href="#three	" id="thirdPageTitleN2">Data</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /footer -->
+</div><!-- /page three -->
+
+</body>
+</html>

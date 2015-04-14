@@ -1,0 +1,23 @@
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes.dex : \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/com/cmivxx/feedreader/BuildConfig.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/com/cmivxx/feedreader/CordovaApp.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/com/cmivxx/feedreader/R$attr.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/com/cmivxx/feedreader/R$drawable.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/com/cmivxx/feedreader/R$string.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/com/cmivxx/feedreader/R$xml.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/com/cmivxx/feedreader/R.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$1.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$2.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$3.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4$1.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$1.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$2.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$3.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$4.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$InAppBrowserClient.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowserDialog.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppChromeClient.class \
+/Users/cmiller/Documents/Projects/mobileFeedReader/Feeds/platforms/android/ant-build/dexedLibs/classes-81848d999924b212af62272d91955496.jar \

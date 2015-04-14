@@ -4,7 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<title>Mobile Feed Reader</title> 
+	<title>Mobile Feed Reader</title>
+
 	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
 	<link rel="stylesheet" href="css/main.css" />
@@ -14,6 +15,7 @@
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;" rel="stylesheet">
+
     <script src="cordova.js"></script>
     <script src="cordova_plugins.js"></script>
 	<script src="js/jquery.min.js"></script>
@@ -175,20 +177,19 @@
 </div>
 
 <script type="text/javascript">
-// function extLink(url) {
-// 	window.open(encodeURI(url), '_system', 'location=yes');
-// 	return false;
-// };
 
-$(document).on('mousedown','a', function(e) { 
-	e.preventDefault(); 
-	var elem = $(this); 
-	var url = elem.attr('href'); 
-	if (url.indexOf('http://') !== -1) { 
-		//alert("caught external"); 
-		window.open(url, '_system'); 
-	} 
-});
+	// External link click handling. 
+
+	$(document).on('click', 'a', function(e) { 
+		var elem = $(this); 
+		var url = elem.attr('href'); 
+		if (url.indexOf('http://') !== -1) { 
+			e.preventDefault(); 
+			window.open(url, '_system'); 
+			return false; 
+		} 
+	});
+
 </script>
 
 </body>
